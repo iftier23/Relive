@@ -10,7 +10,7 @@ body {
 	height:100%;
 	width:100%;
 	margin:0;
-	background: #fffefe;
+	background: #160A17;
 }
 .ie body {
 	filter: dropshadow(color=#000000, offx=0, offy=1);	
@@ -58,7 +58,7 @@ p, pre {
 }
 
 .large-header {
-	background-image: url('../img/demo-1-bg.jpg');
+	background-image: url('../img/Untitled_design.jpg');
 }
 
 code {
@@ -82,7 +82,7 @@ a:hover {
 } 
 a.logo{
 	color: #FFF;
-	float: right;
+	float: left;
 } 
 #header {margin-bottom: 62px;position: relative;width: 100%;height: 82px;line-height: 82px;z-index: 1;}
 .wrapper {margin: 0 auto;position: relative;z-index: 1;width: 1170px;text-align: center;}
