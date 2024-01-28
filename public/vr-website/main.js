@@ -1,8 +1,9 @@
 // Array of image URLs
 var images = [
-  "images/image1.jpeg",
-  "images/117694271-family-in-rocky-mountains-national-park-in-usa.jpg",
-  "images/image_random_p4QuotKG_1665664245097_raw.jpg",
+  "images/8ed53eba-aeac-48c5-b07f-16e1a2496d17.jpg",
+  "images/IMG_0785.jpg",
+  "images/IMG_1511.jpg",
+  "images/IMG_1668.jpg"
 ];
 var currentIndex = 0;
 
