@@ -199,6 +199,32 @@ footer span{
 float:right;
 margin:10px;
 }
+
+.container {
+	position: relative;
+	padding: 20px; /* Adjust the padding as needed */
+	border-radius: 15px; /* Adjust the border-radius to make it more or less rounded */
+	background-color: rgba(0, 0, 0, 0.6);; /* Set the background color to black */
+	color: white; /* Set the text color to white or any other contrasting color */
+  }
+
+.container p {
+	margin: 20;
+	font-size: 20px; /* Adjust the font size to make it bigger */
+}
+
+.image-row {
+    display: flex;
+    gap: 10px; /* Adjust the gap to create space between images */
+    margin-top: 20px; /* Optional: Add margin to create space between text and images */
+  }
+
+.image-row img {
+	max-width: 40%; /* Make sure images don't exceed their container */
+	height: auto; /* Maintain the aspect ratio of the images */
+	border-radius: 8px; /* Optional: Add border-radius to images for a rounded appearance */
+}
+
 .top-wrapper{
 	width:100%;
 	padding: 0;
