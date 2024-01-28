@@ -11,12 +11,13 @@ const imageContainer = document.querySelector(".image-container");
 const viewer = new PANOLENS.Viewer({
   container: imageContainer,
   controlBar: true,
+  enableReticle: true,
 });
 
 // Load the first image
 var panorama = new PANOLENS.ImagePanorama(images[currentIndex]);
 viewer.add(panorama);
-
+viewer.enableControl(1);
 // Function to change the panorama
 function changePanorama() {
   currentIndex = (currentIndex + 1) % images.length;
