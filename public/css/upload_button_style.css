@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .upload-container {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width as needed */
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 254, 254, 0.7);;
+    border: 2px dashed #cccccc;
+    border-radius: 10px;
+  }
+  
+  #uploadLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  #imageInput {
+    display: none;
+  }
+  
+  #preview {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
