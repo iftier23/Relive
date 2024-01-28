@@ -1,115 +1,179 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
-		<meta name="Relive" content="WebThemez"> 
-		<title>Relive</title>
-		<meta name="description" content="Examples for creative website header animations using Canvas and JavaScript" />
-		<meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="../favicon.ico">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" /> 
-		<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
-		<title>Image Upload</title>
-		<link rel="stylesheet" href="css/upload_button_style.css">
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<!-- Latest compiled JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<!--[if IE]>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Relive" content="WebThemez">
+	<title>Relive</title>
+	<meta name="description" content="Examples for creative website header animations using Canvas and JavaScript" />
+	<meta name="keywords" content="header, canvas, animated, creative, inspiration, javascript" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:200,400,800' rel='stylesheet' type='text/css'>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<!--[if IE]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->		
-		<link rel="stylesheet" type="text/css" href="css/styles.css">
-	</head>
-	<body>
+		<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
 
-<body id="home">
-<div id="large-header" class="large-header">
-					<canvas id="demo-canvas"></canvas> 
-</div>
-<div id="Content" class="wrapper"> 
-<div class="top-wrapper">
-<div id="header">
-<div class="wrapper">
-	<h1><a href="#" class="logo">RELIVE</a></h1>	
-	</div>
-</div>
+<body>
 
-</div>
-<div class="bottom-wrapper wrapper">
-<!-- <h2 class="intro">Reviving your memories, one snap at a time. </h2> -->
-<!-- <div id="subscribe">   -->
-	<div class="container">
-		<p>Reviving your memories, one snap at a time..</p>
-	  </div>
-	<!-- <form method="POST" action="subscribe.php"> 
+	<body id="home">
+		<div id="large-header" class="large-header">
+			<canvas id="demo-canvas"></canvas>
+		</div>
+		<div id="Content" class="wrapper">
+			<div class="top-wrapper">
+				<div id="header">
+					<div class="wrapper">
+						<h1><a href="#" class="logo">RELIVE</a></h1>
+					</div>
+				</div>
+
+			</div>
+			<div class="bottom-wrapper wrapper">
+				<!-- <h2 class="intro">Reviving your memories, one snap at a time. </h2> -->
+				<!-- <div id="subscribe">   -->
+				<div class="container">
+					<p>"Your Photos, Your Melodies, Your Nostalgia - All in One Panoramic Album!"</p>
+				</div>
+				<!-- <form method="POST" action="subscribe.php"> 
 		<p class="subscribe-input"><input type="text" name="Email" size="20" value="" placeholder="Subscribe your e-mail Id"><input type="submit" value="Submit" name="Submit"></p> 
 	</form> -->
 
-	<div id="socialIcons">
-		<ul> 
-			<li><a href="" title="Twitter" class="twitterIcon"></a></li>
-			<li><a href="" title="facebook" class="facebookIcon"></a></li>
-			<li><a href="" title="linkedIn" class="linkedInIcon"></a></li>
-			<li><a href="" title="Pintrest" class="pintrestIcon"></a></li>
-		</ul>
-	</div>
-
-	<div class="upload-container">
-		<form id="uploadForm" enctype="multipart/form-data">
-		  <label for="imageInput" id="uploadLabel">
-			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-			  <path d="M0 0h24v24H0z" fill="none"/>
-			  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h4v2h-4v4h-2v-4H7v-2h4z"/>
-			</svg>
-			Upload Image
-		  </label>
-		  <input type="file" id="imageInput" accept="image/*" />
-		</form>
-		<div id="preview"></div>
-	</div>
- <!-- Stuff I just added -->
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Old Page</title>
-	</head>
-	<body>
-		<p>This page has been moved. If you are not redirected within 3 seconds, click the button below:</p>
-
-		<button id="redirectToNewPage">Go to New Page</button>
-
-		<script>
-			document.getElementById("redirectToNewPage").addEventListener("click", function() {
-				window.location.href = "vr-website/index.html"; // Change this to the path of your new HTML page
-			});
-
-			// Optional: Redirect after 3 seconds if the button is not clicked
-			setTimeout(function() {
-				window.location.href = "vr-website/index.html"; // Change this to the path of your old HTML page
-			}, 300000);
-		</script>
-	</body>
 
 
+				<div class="imageUpload">
+					<input type="file" class="inp" onchange="getImageData(event)" />
+					<button onclick="selectImage()" class="selectImage">Select Images</button>
+					<span class="filedata"></span>
+					<div class="progressBar">
+						<div class="progress"></div>
+					</div>
+					<button onclick="uploadImage()" class="upload">Upload</button>
+					<span class="loading">Loading...</span>
+					<img class="img" />
+				</div>
+				<script>
+					const firebaseConfig = {
+						apiKey: "AIzaSyCHoykVxRPhPV-L7HigEvRd1mSXnlBSIaY",
+						authDomain: "relive-10bfa.firebaseapp.com",
+						projectId: "relive-10bfa",
+						storageBucket: "relive-10bfa.appspot.com",
+						messagingSenderId: "578750400587",
+						appId: "1:578750400587:web:4ba721287b5ad25579e5ce"
+					};
 
-	<div class="image-row">
-		<img src="img/empty_image_placeholder.jpg" alt="Image 1" id="empty1">
-		<img src="img/empty_image_placeholder.jpg" alt="Image 2" id="empty2">
-		<img src="img/empty_image_placeholder.jpg" alt="Image 3" id="empty3">
-	</div>
+					const app = firebase.initializeApp(firebaseConfig);
+
+					const storage = firebase.storage();
+
+					const inp = document.querySelector(".inp");
+					const progressbar = document.querySelector(".progress");
+					const img = document.querySelector(".img");
+					const fileData = document.querySelector(".filedata");
+					const loading = document.querySelector(".loading");
+					let file;
+					let fileName;
+					let progress;
+					let isLoading = false;
+					let uploadedFileName;
+					const selectImage = () => {
+						inp.click();
+					};
+					const getImageData = (e) => {
+						file = e.target.files[0];
+						fileName = Math.round(Math.random() * 9999) + file.name;
+						if (fileName) {
+							fileData.style.display = "block";
+						}
+						fileData.innerHTML = fileName;
+						console.log(file, fileName);
+					};
+
+					const uploadImage = () => {
+						loading.style.display = "block";
+						const storageRef = storage.ref().child("images");
+						const folderRef = storageRef.child(fileName);
+						const uploadtask = folderRef.put(file);
+						uploadtask.on(
+							"state_changed",
+							(snapshot) => {
+								console.log("Snapshot", snapshot.ref.name);
+								progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								progress = Math.round(progress);
+								progressbar.style.width = progress + "%";
+								progressbar.innerHTML = progress + "%";
+								uploadedFileName = snapshot.ref.name;
+							},
+							(error) => {
+								console.log(error);
+							},
+							() => {
+								storage
+									.ref("images")
+									.child(uploadedFileName)
+									.getDownloadURL()
+									.then((url) => {
+										console.log("URL", url);
+										if (!url) {
+											img.style.display = "none";
+										} else {
+											img.style.display = "block";
+											loading.style.display = "none";
+										}
+										img.setAttribute("src", url);
+									});
+								console.log("File Uploaded Successfully");
+							}
+						);
+					};
+				</script>
+				<!-- Stuff I just added -->
+
+				<head>
+					<meta charset="UTF-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>Old Page</title>
+				</head>
+
+				<body>
+					<p>This page has been moved. If you are not redirected within 3 seconds, click the button below:</p>
+
+					<button id="redirectToNewPage">Go to New Page</button>
+
+					<script>
+						document.getElementById("redirectToNewPage").addEventListener("click", function () {
+							window.location.href = "vr-website/index.html"; // Change this to the path of your new HTML page
+						});
+
+						// Optional: Redirect after 3 seconds if the button is not clicked
+						setTimeout(function () {
+							window.location.href = "vr-website/index.html"; // Change this to the path of your old HTML page
+						}, 300000);
+					</script>
+				</body>
 
 
-</div> 
-</div>
-</div>
 
 
-<!-- <div>
+			</div>
+		</div>
+		</div>
+
+
+		<!-- <div>
 	<button type="button" onclick="myFunction()">Click Me!</button>
 
 </div> 
@@ -119,18 +183,19 @@ function myFunction() {
   location.replace("./indexold.html")
 }
 </script> -->
- 
-<script src="js/upload_button.js"></script>
-<!-- <script src="js/TweenLite.min.js"></script> -->
-<!-- <script src="js/EasePack.min.js"></script>
-<script src="js/rAF.js"></script> -->
-<!-- <script src="js/demo-1.js"></script>  -->
 
-		
-<!--Scripts-->
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="js/Backstretch.js"></script>
-<script type="text/javascript" src="js/global.js"></script>
+		<script src="js/upload_button.js"></script>
+		<!-- <script src="js/TweenLite.min.js"></script> -->
+		<!-- <script src="js/EasePack.min.js"></script>
+<script src="js/rAF.js"></script> -->
+		<!-- <script src="js/demo-1.js"></script>  -->
+
+
+		<!--Scripts-->
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/Backstretch.js"></script>
+		<script type="text/javascript" src="js/global.js"></script>
 
 	</body>
+
 </html>
