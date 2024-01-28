@@ -10,13 +10,13 @@ body {
 	height:100%;
 	width:100%;
 	margin:0;
-	background: #000000;
+	background: #fffefe;
 }
 .ie body {
 	filter: dropshadow(color=#000000, offx=0, offy=1);	
 }
 h1 {
-	font-size:68px;
+	font-size:70px;
 	/* letter-spacing:-2px; */
 	text-align:center;
 	padding-top:30px;
@@ -54,7 +54,7 @@ p, pre {
 	z-index: 0;
 	position: absolute;
 	height: 100% !important;
-	bottom: 0px;
+	bottom: 70px;
 }
 
 .large-header {
@@ -85,7 +85,7 @@ a.logo{
 	float: right;
 } 
 #header {margin-bottom: 62px;position: relative;width: 100%;height: 82px;line-height: 82px;z-index: 1;}
-.wrapper {margin: 0 auto;position: relative;z-index: 1;width: 1170px;text-align: right;}
+.wrapper {margin: 0 auto;position: relative;z-index: 1;width: 1170px;text-align: center;}
 #socialIcons {display:block;margin: 20px 0 0;/* float: right; *//* text-align: right; */}
 #socialIcons ul {
 margin: 0px; 
@@ -115,7 +115,7 @@ background-position: -245px 0px;
 background-position: -331px 0px;
 }
 .tempBy{display:block;text-align: right;margin-top:40px;font-size: 13px;color: #fff;}
-#Content h2 {display: block;margin: 25px 0 42px;padding: 0px;text-align: right;font-size: 24px;font-weight: 300;color: #fff;line-height: 42px;text-transform: capitalize;}
+#Content h2 {display: block;margin: 25px 0 42px;padding: 0px;text-align: center;font-size: 24px;font-weight: 300;color: #fff;line-height: 42px;text-transform: none;}
 #WindowSlide {
 margin: 0 auto;
 position: relative;
@@ -137,10 +137,6 @@ font-weight: normal;
 display: block;
 clear: both;
 }
-
-#subscribe p{text-align: right;}
-#subscribe input {color: #c3c3c3;vertical-align: middle;width: 260px;border: 1px solid #f1f1f1;padding: 0 10px;height: 50px;text-align: left;background: transparent;font-size: 14px;}
-#subscribe input[type="submit"]{background: rgb(6, 6, 6);width: auto;padding: 0px 25px;cursor: pointer;margin-left: -5px;font-weight: 600;height: 52px;display: inline-block;color: #fff;font-size: 16px;text-transform: uppercase;}
 
 
 .callback,
@@ -211,7 +207,7 @@ margin:10px;
 }
 .bottom-wrapper{
 	/* width: 90%; */
-	padding: 34px 0;
+	padding: 34px 34px;
 	/* background:#fff; */
 	float: left;
 }
