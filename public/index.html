@@ -72,14 +72,53 @@
 		</form>
 		<div id="preview"></div>
 	</div>
+ <!-- Stuff I just added -->
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Old Page</title>
+	</head>
+	<body>
+		<p>This page has been moved. If you are not redirected within 3 seconds, click the button below:</p>
+
+		<button id="redirectToNewPage">Go to New Page</button>
+
+		<script>
+			document.getElementById("redirectToNewPage").addEventListener("click", function() {
+				window.location.href = "indexnew.html"; // Change this to the path of your new HTML page
+			});
+
+			// Optional: Redirect after 3 seconds if the button is not clicked
+			setTimeout(function() {
+				window.location.href = "indexold.html"; // Change this to the path of your old HTML page
+			}, 300000);
+		</script>
+	</body>
+
+
+
 	<div class="image-row">
 		<img src="img/empty_image_placeholder.jpg" alt="Image 1" id="empty1">
 		<img src="img/empty_image_placeholder.jpg" alt="Image 2" id="empty2">
 		<img src="img/empty_image_placeholder.jpg" alt="Image 3" id="empty3">
-	  </div>
+	</div>
+
+
 </div> 
 </div>
+</div>
+
+
+<!-- <div>
+	<button type="button" onclick="myFunction()">Click Me!</button>
+
 </div> 
+
+<script>
+function myFunction() {
+  location.replace("./indexold.html")
+}
+</script> -->
  
 <script src="js/upload_button.js"></script>
 <!-- <script src="js/TweenLite.min.js"></script> -->
